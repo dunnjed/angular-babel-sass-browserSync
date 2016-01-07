@@ -1,0 +1,1 @@
+{"version":3,"sources":["shared/data.js"],"names":[],"mappings":";;;;;AAAO,IAAI,QAAQ,WAAR,QAAQ,GAAG,eAAe,CAAC","file":"shared/data.js","sourcesContent":["export var greeting = \"Hello friend!\";"],"sourceRoot":"/source/"}

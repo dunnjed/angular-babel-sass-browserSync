@@ -1,0 +1,71 @@
+/* Changing Susy default global settings */
+
+$susy: (
+/* Tells Susy to use 12 columns */
+
+columns: 12,
+/* Tells Susy that the container has a max-width of 1120px */
+
+container: 1120px,
+/* Tells Susy to use border-box */
+
+global-box-sizing: border-box);
+/* Makes border-box properties */
+
+@include border-box-sizing;
+.home {
+    .wrap {
+        @include container;
+        height: 300px;
+        background-color: orange;
+        margin-top: 20px;
+    }
+    /* Tells Susy there's 8 columns in the content */
+    
+    .content {
+        @include span(8);
+        background-color: powderblue;
+        height: 100%;
+        /* Styles for desktop view go here */
+        
+        @media (min-width: 700px) {
+            @include span(8);
+        }
+    }
+    /* Tells Susy there's 4 columns in the sidebar, and its the last item on the row. */
+    
+    .sidebar {
+        @include span(4 last);
+        background-color: lavender;
+        height: 100%;
+        /* Styles for desktop view go here */
+        
+        @media (min-width: 700px) {
+            @include span(4 last);
+        }
+    }
+    .social {
+        /* Adds a padding of 19px to each side of the .social container */
+        
+        padding: gutter();
+        /* Adding a clearfix because all children elements are floated */
+        
+        @include clearfix;
+        .social__list-item {
+            /* Telling Susy that there are 10 items, and each takes up 1 row */
+            
+            @include gallery(2 of 10);
+            margin-bottom: gutter(10);
+            background-color: teal;
+            /* Another way to tell Susy that this is the last item in the row */
+            
+            &:last-child {
+                @include last;
+            }
+            @media (min-width: 700px) {
+                @include gallery(1 of 10);
+                margin-bottom: 0;
+            }
+        }
+    }
+}

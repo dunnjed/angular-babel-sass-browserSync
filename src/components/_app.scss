@@ -1,0 +1,16 @@
+$app-box-sizing: border-box;
+
+.main {
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    padding-bottom: 40px;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    border: 20px solid orange;
+    width: 300px;
+    @include box-sizing($app-box-sizing);
+    cursor: pointer;
+    @include border-radius(20px);
+}
+

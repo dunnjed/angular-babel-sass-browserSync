@@ -1,0 +1,26 @@
+{
+  "name": "ng-app",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "JD <none>"
+  ],
+  "license": "ISC",
+  "moduleType": [
+    "es6"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/vendor/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "susy": "git@github.com:oddbird/susy.git#2.2.9",
+    "compass-mixins": "git@github.com:Igosuki/compass-mixins.git#0.12.7"
+  }
+}

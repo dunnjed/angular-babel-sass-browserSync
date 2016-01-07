@@ -1,0 +1,156 @@
+.main {
+  background-color: blue;
+  color: white;
+  padding: 20px;
+  padding-bottom: 40px;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  border: 20px solid orange;
+  width: 300px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px; }
+
+/* Changing Susy default global settings */
+/* Makes border-box properties */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.home {
+  /* Tells Susy there's 8 columns in the content */
+  /* Tells Susy there's 4 columns in the sidebar, and its the last item on the row. */ }
+  .home .wrap {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    background-color: orange;
+    margin-top: 20px; }
+    .home .wrap:after {
+      content: " ";
+      display: block;
+      clear: both; }
+  .home .content {
+    width: 66.10169%;
+    float: left;
+    margin-right: 1.69492%;
+    background-color: powderblue;
+    height: 100%;
+    /* Styles for desktop view go here */ }
+    @media (min-width: 700px) {
+      .home .content {
+        width: 66.10169%;
+        float: left;
+        margin-right: 1.69492%; } }
+  .home .sidebar {
+    width: 32.20339%;
+    float: right;
+    margin-right: 0;
+    background-color: lavender;
+    height: 100%;
+    /* Styles for desktop view go here */ }
+    @media (min-width: 700px) {
+      .home .sidebar {
+        width: 32.20339%;
+        float: right;
+        margin-right: 0; } }
+  .home .social {
+    /* Adds a padding of 19px to each side of the .social container */
+    padding: 1.69492%;
+    /* Adding a clearfix because all children elements are floated */
+    overflow: hidden;
+    *zoom: 1; }
+    .home .social .social__list-item {
+      /* Telling Susy that there are 10 items, and each takes up 1 row */
+      width: 18.36735%;
+      float: left;
+      margin-bottom: 2.04082%;
+      background-color: teal;
+      /* Another way to tell Susy that this is the last item in the row */ }
+      .home .social .social__list-item:nth-child(5n + 1) {
+        margin-left: 0;
+        margin-right: -100%;
+        clear: both;
+        margin-left: 0; }
+      .home .social .social__list-item:nth-child(5n + 2) {
+        margin-left: 20.40816%;
+        margin-right: -100%;
+        clear: none; }
+      .home .social .social__list-item:nth-child(5n + 3) {
+        margin-left: 40.81633%;
+        margin-right: -100%;
+        clear: none; }
+      .home .social .social__list-item:nth-child(5n + 4) {
+        margin-left: 61.22449%;
+        margin-right: -100%;
+        clear: none; }
+      .home .social .social__list-item:nth-child(5n + 5) {
+        margin-left: 81.63265%;
+        margin-right: -100%;
+        clear: none; }
+      .home .social .social__list-item:last-child {
+        float: right;
+        margin-right: 0; }
+      @media (min-width: 700px) {
+        .home .social .social__list-item {
+          width: 8.16327%;
+          float: left;
+          margin-bottom: 0; }
+          .home .social .social__list-item:nth-child(10n + 1) {
+            margin-left: 0;
+            margin-right: -100%;
+            clear: both;
+            margin-left: 0; }
+          .home .social .social__list-item:nth-child(10n + 2) {
+            margin-left: 10.20408%;
+            margin-right: -100%;
+            clear: none; }
+          .home .social .social__list-item:nth-child(10n + 3) {
+            margin-left: 20.40816%;
+            margin-right: -100%;
+            clear: none; }
+          .home .social .social__list-item:nth-child(10n + 4) {
+            margin-left: 30.61224%;
+            margin-right: -100%;
+            clear: none; }
+          .home .social .social__list-item:nth-child(10n + 5) {
+            margin-left: 40.81633%;
+            margin-right: -100%;
+            clear: none; }
+          .home .social .social__list-item:nth-child(10n + 6) {
+            margin-left: 51.02041%;
+            margin-right: -100%;
+            clear: none; }
+          .home .social .social__list-item:nth-child(10n + 7) {
+            margin-left: 61.22449%;
+            margin-right: -100%;
+            clear: none; }
+          .home .social .social__list-item:nth-child(10n + 8) {
+            margin-left: 71.42857%;
+            margin-right: -100%;
+            clear: none; }
+          .home .social .social__list-item:nth-child(10n + 9) {
+            margin-left: 81.63265%;
+            margin-right: -100%;
+            clear: none; }
+          .home .social .social__list-item:nth-child(10n + 10) {
+            margin-left: 91.83673%;
+            margin-right: -100%;
+            clear: none; } }
+
+.about {
+  background-color: pink;
+  color: black;
+  width: 100%;
+  height: 200px;
+  margin-top: 10px;
+  padding: 10px;
+  font-family: sans-serif; }
