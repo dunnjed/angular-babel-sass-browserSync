@@ -1,16 +1,9 @@
 $app-box-sizing: border-box;
 
 .main {
-    background-color: blue;
-    color: white;
-    padding: 20px;
-    padding-bottom: 40px;
-    font-size: 1.2rem;
-    font-family: sans-serif;
-    border: 20px solid orange;
-    width: 300px;
-    @include box-sizing($app-box-sizing);
+    border: 2px solid orange;
+    width: 100%;
     cursor: pointer;
-    @include border-radius(20px);
+    margin-bottom: 5px;
 }
 

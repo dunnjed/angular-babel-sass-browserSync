@@ -35,10 +35,7 @@ gulp.task('serve', ['sass', 'babel'], function () {
 gulp.task('sass', function () {
     return gulp.src([src.mainSass])
         .pipe(sass()
-            .on('error', function (err) {
-                sass.logError(err);
-                this.emit('end');
-            }))
+            .on('error', sass.logError))
         //.pipe(sourcemaps.init())
         //.pipe(cssnano())
         //.pipe(sourcemaps.write('.'))

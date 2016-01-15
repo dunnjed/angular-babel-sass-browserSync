@@ -4,11 +4,13 @@ import $ from "jquery";
 import TweenMax from "gsap";
 import uiRouter from "ui-router";
 import aboutComponentModule, { AboutController } from "./about/about.component";
+import gridComponentModule, { GridController } from "./grid/grid.component";
 
 
 export let app = angular.module('app', [
     uiRouter,
-    aboutComponentModule
+    aboutComponentModule,
+    gridComponentModule
 ]);
 
 app.config(function ($stateProvider, $urlRouterProvider) {
@@ -25,6 +27,11 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             url: '/about',
             templateUrl: 'src/components/about/about.html',
             controller: `${AboutController} as aboutCtrl`    
+        })
+        .state('grid', {
+            url: '/grid',
+            templateUrl: 'src/components/grid/grid.html',
+            controller: `${GridController} as gridCtrl`    
         });
 
     $urlRouterProvider.otherwise('/');

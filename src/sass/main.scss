@@ -2,7 +2,38 @@
 @import "../vendor/compass-mixins/lib/compass/utilities";
 @import "../vendor/susy/sass/susy";
 
+
+$susy: (
+/* Tells Susy to use 12 columns */
+
+columns: 12,
+/* Tells Susy that the container has a max-width of 1120px */
+
+container: 1200px,
+/* Tells Susy to use border-box */
+
+global-box-sizing: border-box,
+
+debug: (image: show));
+/* Makes border-box properties */
+
+@include border-box-sizing;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @import "../components/app";
-@import "../components/home/home";
+//@import "../components/home/home";
 @import "../components/about/about";
+@import "../components/grid/grid";
 

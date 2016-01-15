@@ -1,0 +1,57 @@
+.grid {
+    background-color: pink;
+    color: black;
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+    padding: 10px;
+    font-family: sans-serif;
+}
+
+
+
+.wrap {
+  max-width: 1120px;
+  @include container;
+}
+
+/* Tells Susy there's 8 columns in the content */
+.content {
+  @include span(8);
+  background-color: lighten(red, 30%);
+  
+  @media (max-width: 800px) {
+    @include span(12);
+  }
+}
+
+/* Tells Susy there's 4 columns in the sidebar, and its the last item on the row. */
+.sidebar {
+  @include span(4 last);
+  background-color: lighten(green, 30%);
+  @media (max-width: 800px) {
+    @include span(12);
+  }
+}
+
+
+
+
+.grid__wrap {
+    margin-top: 50px;
+    @include with-layout(3 500px) {    
+        @include container;
+        .grid__col {
+            @include span(1 of 3);
+            min-height: 300px;
+            margin-bottom: 40px;
+            @media (max-width: 400px) {
+                @include span(3 of 3);
+            }
+        }
+
+        .grid__col:last-child {
+            @include last;
+        }  
+    }   
+}

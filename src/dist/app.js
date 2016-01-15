@@ -27,11 +27,15 @@ var _about = require("./about/about.component");
 
 var _about2 = _interopRequireDefault(_about);
 
+var _grid = require("./grid/grid.component");
+
+var _grid2 = _interopRequireDefault(_grid);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var app = exports.app = _angular2.default.module('app', [_uiRouter2.default, _about2.default]);
+var app = exports.app = _angular2.default.module('app', [_uiRouter2.default, _about2.default, _grid2.default]);
 
 app.config(function ($stateProvider, $urlRouterProvider) {
 
@@ -44,6 +48,10 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         url: '/about',
         templateUrl: 'src/components/about/about.html',
         controller: _about.AboutController + " as aboutCtrl"
+    }).state('grid', {
+        url: '/grid',
+        templateUrl: 'src/components/grid/grid.html',
+        controller: _grid.GridController + " as gridCtrl"
     });
 
     $urlRouterProvider.otherwise('/');
